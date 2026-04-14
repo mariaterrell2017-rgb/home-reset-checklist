@@ -1,6 +1,8 @@
 
 
- "name": "home-reset-checklist",
+ 
+   {
+  "name": "home-reset-checklist",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -16,4 +18,6 @@
   "devDependencies": {
     "@vitejs/plugin-react": "^4.3.4",
     "vite": "^5.0.0"
+  }
+}
 
