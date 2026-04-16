@@ -16,10 +16,12 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-pink-50 flex items-center justify-center p-6">
-      <div className="bg-white shadow-xl rounded-2xl p-8 max-w-xl w-full">
+      <div className="bg-white shadow-xl rounded-2xl p-8 max-w-xl w-full"> 
+        <img src="/logo.png" alt="Spoiled Homes Logo" className="w-28 mx-auto mb-4" />
         <h1 className="text-3xl font-bold text-pink-600 mb-2 text-center">
           60-Minute Home Reset Checklist
         </h1>
+          
 
         <p className="text-gray-600 text-center mb-6">
           A simple reset routine to get your home back in order fast.
