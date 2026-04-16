@@ -24,20 +24,18 @@ export default function App() {
           A simple reset routine to get your home back in order fast.
         </p>
         <div className="space-y-3">
-
-  {checklist.map((item, index) => (
-  <label
+          {checklist.map((item, index) => (
+            <label
+              key={index}
+              className="flex items-center gap-3 p-3 rounded-lg border border-pink-100 hover:bg-pink-50"
+            >
+              <input type="checkbox" className="w-5 h-5 accent-pink-500" />
+              <span className="text-gray-700">{item}</span>
+            </label>
+          ))}
+        </div>
     
-  
-    key={index}
-    className="flex items-center gap-3 p-3 rounded-lg border border-pink-100 hover:bg-pink-50"
-  >
-    <input type="checkbox" className="w-5 h-5 accent-pink-500" />
-    <span className="text-gray-700">{item}</span>
-  </label>
-))}
     
-</div>
 
 <div className="mt-8 text-center">
   <button className="bg-pink-500 hover:bg-pink-600 text-white font-semibold px-6 py-3 rounded-xl shadow">
@@ -53,11 +51,16 @@ export default function App() {
     className="inline-block bg-black hover:bg-gray-800 text-white font-semibold py-3 px-6 rounded-xl shadow"
   >
     Book a Cleaning
-  </a>
+</a>
 </div>
-  </div>
+</div> 
+</div> 
 );
 }
+
+
+  
+
     
 
   
