@@ -1,62 +1,72 @@
-import React from "react";
+import { useState } from "react";
 
 export default function App() {
-  const checklist = [
-    "Make all beds",
-    "Open blinds/curtains",
-    "Pick up trash",
-    "Clear countertops",
-    "Load or unload dishwasher",
-    "Wipe kitchen counters",
-    "Sweep high-traffic floors",
-    "Do one load of laundry",
-    "Tidy living room",
-    "Reset bathroom counters",
-  ];
+  const [started, setStarted] = useState(false);
 
   return (
-    <div className="min-h-screen bg-pink-50 flex items-center justify-center p-6">
-      <div className="bg-white shadow-xl rounded-2xl p-8 max-w-xl w-full"> 
-        
-          
+    <div style={{ fontFamily: "Arial", padding: "20px", textAlign: "center" }}>
+      
+      {/* HEADER */}
+      <h1 style={{ color: "#6a5acd" }}>Spoiled Homes Cleaning Service</h1>
+      <h2>💛 60-Minute Home Reset for Busy Moms</h2>
+      <p>Let’s get your home back together — one room at a time.</p>
 
-        <p className="text-gray-600 text-center mb-6">
-          A simple reset routine to get your home back in order fast.
-        </p>
-        <div className="space-y-3">
-          {checklist.map((item, index) => (
-            <label
-              key={index}
-              className="flex items-center gap-3 p-3 rounded-lg border border-pink-100 hover:bg-pink-50"
+      {!started ? (
+        <button
+          onClick={() => setStarted(true)}
+          style={{
+            padding: "12px 20px",
+            fontSize: "16px",
+            backgroundColor: "#ffb6c1",
+            border: "none",
+            borderRadius: "10px",
+            cursor: "pointer",
+          }}
+        >
+          Start My Reset 🧹
+        </button>
+      ) : (
+        <div>
+          <h3>Let’s go! You got this 💪</h3>
+
+          <ul style={{ listStyle: "none", padding: 0 }}>
+            <li>🧽 Kitchen — wipe, dishes, clear counters</li>
+            <li>🛋 Living Room — fluff, fold, tidy</li>
+            <li>🚿 Bathroom — wipe + refresh</li>
+            <li>🧺 Laundry — quick reset load</li>
+          </ul>
+
+          <p style={{ marginTop: "20px" }}>
+            💖 You’re doing amazing. Progress over perfection.
+          </p>
+
+          <a
+            href="https://spoiledhomescleaningservice.com"
+            target="_blank"
+          >
+            <button
+              style={{
+                marginTop: "20px",
+                padding: "12px 20px",
+                backgroundColor: "#6a5acd",
+                color: "white",
+                border: "none",
+                borderRadius: "10px",
+                cursor: "pointer",
+              }}
             >
-              <input type="checkbox" className="w-5 h-5 accent-pink-500" />
-              <span className="text-gray-700">{item}</span>
-            </label>
-          ))}
+              Book a Cleaning 🧼
+            </button>
+          </a>
         </div>
-    
-    
-
-<div className="mt-8 text-center">
-  <button className="bg-pink-500 hover:bg-pink-600 text-white font-semibold px-6 py-3 rounded-xl shadow">
-    Start Your Reset
-  </button>
-</div>
-
-<div className="mt-6 text-center">
-  <a
-    href="https://www.spoiledhomescleaningservice.com"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="inline-block bg-black hover:bg-gray-800 text-white font-semibold py-3 px-6 rounded-xl shadow"
-  >
-    Book a Cleaning
-</a>
-</div>
-</div> 
-</div> 
-);
+      )}
+    </div>
+  );
 }
+  
+       
+
+
 
 
   
